@@ -1,26 +1,94 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="pt">
 
-<html lang="pt-br">
 <head>
-  <meta charset="utf-8">
-
-  <title>Satoshis</title>
-  <meta name="description" content="O que é um satoshi">
-  <meta name="author" content="Massarelos">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Satoshis - Casa dos Maximalistas em Bitcoin</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet" />
+  <link href="fontawesome/css/all.min.css" rel="stylesheet" />
+  <link href="css/tooplate-chilling-cafe.css" rel="stylesheet" />
 </head>
 
 <body>
+  <div class="tm-container">
+    <div class="tm-text-white tm-page-header-container">
+      <i class="fas fa-mug-hot fa-2x tm-page-icon"></i>
+      <h1 class="tm-page-header">Satoshis</h1>
+    </div>
+    <div class="tm-main-content">
+      <div id="tm-intro-img"></div>
 
-  <h3>Satoshis</h3>
-  
-  <p>Satoshis são as menores unidades do Bitcoin.</p>
-  <p>Um (1) Bitcoin possui cem milhões (100.000.000) de Satoshis.</p>
-  <p>A menor quantia em Bitcoin que alguém pode ter é 0.00000001 (um satoshi).</p>
-  
-  <p>Troque shitcoins por Bitcoin</p>
-  
-  <iframe id='iframe-widget' src='https://changenow.io/embeds/exchange-widget/v2/widget.html?amount=1&from=ltc&link_id=35b65cead8d9ea&to=btc&FAQ=false&logo=true' width='100%' height='350px' frameborder='0'></iframe><script type='text/javascript' src='https://changenow.io/embeds/exchange-widget/v2/stepper-connector.js'></script>
+      <!-- Coffee Menu -->
+      <section class="tm-section">
+        <p style="text-align: center;">
+          Satoshi é a menor unidade do Bitcoin.<br>
+          Um (1) Bitcoin possui cem milhões (100.000.000) de Satoshis.<br>
+          A menor quantia em Bitcoin que alguém pode ter é 0.00000001 (um satoshi).<br>
+          Satoshis são os componentes da criptomoeda que importa ter: Bitcoin.
+        </p>
+        <hr />
+        <h2 class="tm-section-header">Troque Altcoins por Bitcoin</h2>
+        <div class="tm-responsive-table">
+          <iframe id='iframe-widget'
+            src='https://changenow.io/embeds/exchange-widget/v2/widget.html?amount=1&from=ltc&link_id=35b65cead8d9ea&to=btc&FAQ=false&logo=true'
+            width='100%' height='350px' frameborder='0'></iframe>
+          <script type='text/javascript'
+            src='https://changenow.io/embeds/exchange-widget/v2/stepper-connector.js'></script>
 
+        </div>
+        <hr />
+        <h2 class="tm-section-header">Saiba mais sobre Bitcoin</h2>
+        <div class="tm-responsive-table">
+          <table>
+            <tr class="tm-tr-header">
+              <th>Grupos de Discussão</th>
+            </tr>
+            <tr>
+              <td><a href="https://t.me/satoshisbrasil" class="tm-contact-link">Bitcoin, grupo de Telegram</a></td>
+            </tr>
+          </table>
+        </div>
+      </section>
+
+      <hr />
+      <!-- Talk to us -->
+      <section class="tm-section tm-section-small">
+        <h2 class="tm-section-header">Vamos conversar</h2>
+
+        <p style="text-align: center;">
+          Entre em contato por
+          <a href="mailto:bitcoin@satoshis.com.br" class="tm-contact-link">Email</a>
+        </p>
+
+      </section>
+    </div>
+    <footer>
+      <p class="tm-text-white tm-footer-text">
+        Copyright &copy; 2020 Satoshis
+      </p>
+    </footer>
+  </div>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script>
+    $(function () {
+      // Adjust intro image height based on width.
+      $(window).resize(function () {
+        var img = $("#tm-intro-img");
+        var imgWidth = img.width();
+
+        // 640x425 ratio
+        var imgHeight = (imgWidth * 425) / 640;
+
+        if (imgHeight < 300) {
+          imgHeight = 300;
+        }
+
+        img.css("min-height", imgHeight + "px");
+      });
+    });
+  </script>
 </body>
+
 </html>
